@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Rickshaw Booking - Tezpur University</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" 
+            async defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section with University Logo -->
+        <header>
+            <div class="logo">
+                <img src="WhatsApp Image 2024-12-13 at 19.02.01_58633e86.jpg" alt="University Logo" class="university-logo">
+                <span class="university-name"></span>
+            </div>
+            <div class="logo">
+                <img src="download.jpg" alt="University Logo" class="university-logo">
+                <span class="university-name">Tezpur University</span>
+            </div>
+            <div class="header-title">
+                <h1>E-Rickshaw Booking System</h1>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#driver-registration">Driver Registration</a></li>
+                <li><a href="#customer-booking">Customer Booking</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#tezpur-university">About Tezpur University</a></li>
+            </ul>
+        </nav>
+
+        <!-- Driver Registration Section -->
+        <section id="driver-registration" class="section-bg-1">
+            <h2>Driver Registration</h2>
+            <form id="registration-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="license"> Driving License :</label>
+                <input type="text" id="license" name="license" required><br><br>
+                
+                <label for="number"> Phone Number :</label>
+                <input type="text" id="number" name="number" required><br><br>
+
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" required><br><br>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
+
+        <!-- Customer Booking Section -->
+        <section id="customer-booking" class="section-bg-2">
+            <h2>Book an E-Rickshaw</h2>
+            <form id="booking-form">
+                <label for="name">Customer name:</label>
+                <input type="text" id="name" required><br><br>
+                
+                <label for="name1">Phone number:</label>
+                <input type="text" id="name1" required><br><br>
+                
+                <label for="pickup-location">Pick-up Location:</label>
+                <input type="text" id="pickup-location" required><br><br>
+
+                <label for="drop-location">Drop Location:</label>
+                <input type="text" id="drop-location" required><br><br>
+
+                <input type="submit" value="Book Now">
+            </form>
+        </section>
+
+        <!-- Google Map Section -->
+        <section id="map" class="section-bg-3">
+            <h2>Pick-up Location on Google Map</h2>
+            <div id="map-canvas" style="width:100%; height:400px;"></div>
+            <p>View on <a href="https://maps.app.goo.gl/bwF48C8Tv6y47vr3A" target="_blank" rel="noopener noreferrer">Google Maps</a></p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="gallery.jpeg" alt="Gallery Image 1" class="gallery-image" onclick="openModal('gallery1.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery2.jpg" alt="Gallery Image 2" class="gallery-image" onclick="openModal('gallery2.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery3.jpg" alt="Gallery Image 3" class="gallery-image" onclick="openModal('gallery3.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="Green.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="gate.png" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="tezpur sundar.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2024-12-13 at 19.02.01_58633e86.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2024-12-13 at 19.13.35_1d3b27f7.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="poster.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <div class="gallery-item">
+                    <img src="icard.jpg" alt="Gallery Image 4" class="gallery-image" onclick="openModal('gallery4.jpg')">
+                </div>
+                <!-- Add more images here -->
+            </div>
+        </section>
+
+        <!-- About Tezpur University Section -->
+        <section id="tezpur-university">
+            <h2>About Tezpur University</h2>
+            <p>Tezpur University, located in Assam, India, is a prestigious educational institution known for its academic excellence and research.</p>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We provide a seamless and convenient e-rickshaw booking service, contributing to sustainable urban transportation in the region.</p>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>If you have any queries, feel free to reach out to us via email or phone.</p>
+            <p>Email: info@tezpurrickshaw.com</p>
+            <p>Phone: +91 9876543210</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 E-Rickshaw Service - <a href="#">Tezpur University</a></p>
+        </footer>
+    </div>
+
+    <!-- Modal for Image Gallery -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" />
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Google Maps API Initialization
+        function initMap() {
+            const location = { lat: 26.6978, lng: 92.7798 }; // Example location (Tezpur, India)
+            const map = new google.maps.Map(document.getElementById("map-canvas"), {
+                zoom: 14,
+                center: location
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map,
+                title: "Tezpur University"
+            });
+        }
+
+        // Booking form submission logic
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const Customername = document.getElementById("name").value;
+            const Phonenumber = document.getElementById("name1").value;
+            const pickupLocation = document.getElementById("pickup-location").value;
+            const dropLocation = document.getElementById("drop-location").value;
+
+            alert(`Booking Successful!\nname: ${Customername}\nname1: ${Phonenumber}\nPick-up: ${pickupLocation}\nDrop: ${dropLocation}`);
+        });
+
+        // Gallery Modal Logic
+        function openModal(imageSrc) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

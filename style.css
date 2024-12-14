@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(174, 219, 75);
+}
+
+/* Container and Content Styling */
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 130px;  /* Change size of logo here */
+    height: auto;
+}
+
+.university-name {
+    font-size: 1.5em;
+    color: white;
+    margin-left:0px;
+}
+
+.header-title h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery Section */
+#gallery {
+    margin-top: 40px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styling for Image Gallery */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Form Styles */
+form {
+    text-align: left;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input[type="text"],
+input[type="file"] {
+    padding: 8px;
+    margin-top: 8px;
+    width: 80%;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Section Backgrounds */
+.section-bg-1 {
+    background-image: url('tezpur\ sundar.jpg');
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.section-bg-2 {
+    background-image: url('background.jpg.webp');
+    background-size: cover;
+    padding: 250px 0;
+}
+
+.section-bg-3 {
+    background-image: url('SOE-Tezpur-University.jpg');
+    background-size: cover;
+    padding: 300px 0;
+}
+
+/* About Tezpur University Section */
+#tezpur-university {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#tezpur-university p {
+    font-size: 1.2em;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+}
